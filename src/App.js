@@ -29,7 +29,7 @@ export default function App() {
         setIsLoading(true);
         setError("");
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${OMDBkey}&s=${query}`
+          `https://www.omdbapi.com/?apikey=${OMDBkey}&s=${query}`
         );
 
         if (!res.ok)
@@ -260,7 +260,7 @@ function MovieDetails({ selectedId, onCloseMovie }) {
       // ERROR part missing.
       setIsLoading(true);
       const res = await fetch(
-        `http://www.omdbapi.com/?apikey=${OMDBkey}&i=${selectedId}`
+        `https://www.omdbapi.com/?apikey=${OMDBkey}&i=${selectedId}`
       );
       const data = await res.json();
       setMovie(data);
